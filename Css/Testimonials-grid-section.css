@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+:root {
+  --Primary-Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Neutral-Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  /* Note for text colors:
+    "Verified Graduate" has the same color as the person's name with 50% opacity
+    Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* XLarge */
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+h4 {
+  color: var(--White);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 18px 0;
+}
+p {
+  color: var(--White);
+  opacity: 60%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.box {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+  box-shadow: 3px 8px 15px 0px hsl(0deg 0% 0% / 40%);
+}
+.box:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  box-shadow: 3px 8px 15px 0px hsl(0deg 0% 0% / 25%);
+}
+main {
+  margin-top: 40px;
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px 16px;
+}
+.box .head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+}
+.box .head img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+  cursor: pointer;
+}
+.box .head img:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.box .head .name {
+  color: var(--White);
+  cursor: pointer;
+}
+.box .head span {
+  color: var(--White);
+  opacity: 50%;
+  display: block;
+}
+main .container .one {
+  grid-column: span 2;
+  background-color: var(--Primary-Moderate-violet);
+  position: relative;
+  background-image: url(../Imgs/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 1%;
+  background-size: 7rem;
+}
+main .container .tow {
+  background-color: var(--Very-dark-grayish-blue);
+}
+main .container .three {
+  grid-row: span 2;
+  background-color: var(--White);
+}
+main .container .four {
+  background-color: var(--White);
+}
+main .container .three h4,
+main .container .three p,
+main .container .three .head .name,
+main .container .three .head .name span,
+main .container .four h4,
+main .container .four p,
+main .container .four .head .name,
+main .container .four .head .name span {
+  color: var(--Very-dark-grayish-blue);
+}
+main .container .five {
+  grid-column: span 2;
+  background-color: var(--Very-dark-blackish-blue);
+}
+main .container .five img {
+  border: 2px solid hsla(263, 55%, 52%, 0.5);
+}
+.attribution {
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Primary-Moderate-violet);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+.attribution a:hover {
+  color: hsl(266, 78%, 34%);
+  text-decoration: underline;
+}
+@media (max-width: 991px) {
+  main .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  main .container {
+    grid-template-columns: 1fr;
+    gap: 15px 0;
+  }
+  .box {
+    grid-column: 1;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
